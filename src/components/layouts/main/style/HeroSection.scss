@@ -1,0 +1,81 @@
+.HeroSection {
+  margin-top: calc(-100vh + 5.9rem);
+  padding-bottom: 2rem;
+  background-color: #090909;
+  // position: relative;
+  // z-index: -1;
+  .heroContainer {
+    width: 100%;
+    max-width: 75rem;
+    margin: auto;
+
+    .HeroHeader {
+      height: calc(100vh - 7.5rem);
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      .heroHeading {
+        margin-bottom: 11rem;
+        h1 {
+          font-size: 5.6rem;
+          font-weight: 700;
+          line-height: 6rem;
+          // word-spacing: -0.9rem;
+          letter-spacing: -0.1rem;
+          margin: 2.6rem 0;
+        }
+      }
+      .heroFooter {
+        > p {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          font-size: 1.2rem;
+          font-weight: 600;
+        }
+
+        .apple-tv_logo {
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          width: 2.2rem;
+          aspect-ratio: 1/1;
+          border-radius: 0.45rem;
+          background-color: #111111;
+          // margin-top: 2rem;
+        }
+      }
+    }
+    .HeroInfos {
+      margin-top: 10rem;
+      p {
+        font-size: 3.9rem;
+        font-weight: 700;
+        line-height: 4rem;
+        margin-top: 4rem;
+        // word-spacing: rem;
+        letter-spacing: -0.1rem;
+      }
+    }
+
+    .HeroPricing {
+      margin-top: 7.5rem;
+      display: flex;
+      justify-content: stretch;
+      gap: 3rem;
+      h3 {
+        font-size: 1.63rem;
+        margin: 0.3rem 0 0 0;
+        span:last-of-type {
+          font-size: 2.5rem;
+          color: #fafafa;
+        }
+      }
+      p {
+        color: #a0a0a0;
+        font-size: 1.1rem;
+        margin-bottom: 3.5rem;
+      }
+    }
+  }
+}

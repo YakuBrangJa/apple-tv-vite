@@ -1,0 +1,46 @@
+@import "../../../../css-utils/colors.scss";
+
+.Navbar {
+  top: 0;
+  background-color: #131313;
+  position: sticky;
+  z-index: 2;
+  .NavContainer {
+    margin: auto;
+    width: 100%;
+    max-width: 62rem;
+    .NavbarTop {
+      height: 2.7rem;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      > span {
+        display: flex;
+        font-size: 12px;
+        color: $font-gray100;
+        font-weight: 400;
+        &:hover {
+          color: $font-gray50;
+          cursor: pointer;
+        }
+      }
+    }
+    .NavbarBottom {
+      top: 0px;
+      left: 0;
+      position: sticky;
+      height: 3rem;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 0.2rem;
+      h1 {
+        font-weight: 600;
+        font-size: 1.4rem;
+        line-height: 2.5rem;
+      }
+    }
+  }
+}

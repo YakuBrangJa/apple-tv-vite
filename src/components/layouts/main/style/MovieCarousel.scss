@@ -1,0 +1,119 @@
+@import "../../../../css-utils/animation.scss";
+
+@include keyframes(slider1) {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@include keyframes(slider2) {
+  0% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@include keyframes(reverseSlider) {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.MovieCarousel {
+  min-height: 100vh;
+  // min-height: 100rem;
+  background-color: #050505ff;
+  position: relative;
+  padding-bottom: 2rem;
+
+  .FeaturedPrimary {
+    margin-bottom: 1.1rem;
+    // overflow: hidden;
+    // display: flex;
+    // gap: 1.3rem;
+    // white-space: nowrap;
+
+    .primary-poster {
+      height: 31rem;
+      width: 50rem;
+      flex-shrink: 0;
+      background-color: #555555;
+      border-radius: 0.8rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #999999;
+    }
+
+    .slider-animation {
+      transform: translate(-27rem);
+    }
+  }
+  .FeaturedSecondary1,
+  .FeaturedSecondary2 {
+    margin-bottom: 1.1rem;
+    position: relative;
+
+    .secondary-poster {
+      height: 13rem;
+      width: 23rem;
+      flex-shrink: 0;
+      background-color: #555555;
+      border-radius: 0.6rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #999999;
+
+      &:hover {
+        // color: red;
+        // background-color: red;
+        .StreamNowBtn {
+          transform: translateY(0) !important;
+          opacity: 1;
+        }
+      }
+      .StreamNowBtn {
+        position: absolute;
+        transform: translateY(10px);
+        opacity: 0;
+        transition: all 300ms ease;
+      }
+    }
+  }
+  .FeaturedSecondary1 {
+    .slider-animation {
+      @include animation(slider2 50s infinite linear);
+    }
+    // .reverse-slider {
+    //   @include animation(reverseSlider 50s infinite linear);
+    //   animation-play-state: paused;
+    //   animation-direction: reverse;
+    // }
+
+    // &:hover {
+    //   .reverse-slider {
+    //     animation-play-state: play;
+    //   }
+    // }
+  }
+  .FeaturedSecondary2 {
+    .slider-animation {
+      @include animation(slider2 40s infinite linear);
+    }
+    // &:hover {
+    //   .reverse-slider {
+    //   }
+    // }
+  }
+}

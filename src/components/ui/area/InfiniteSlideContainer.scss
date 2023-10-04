@@ -1,0 +1,28 @@
+@import "../../../css-utils/animation.scss";
+
+@include keyframes(slide) {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.InfiteSlideContainer {
+  overflow: hidden;
+  display: flex;
+  gap: 1.3rem;
+  white-space: nowrap;
+
+  // .InfiteSlideContainer_slider-reverse {
+  //   flex-shrink: 0;
+
+  .InfiteSlideContainer_slider {
+    flex-shrink: 0;
+    display: inline-flex;
+    gap: 1.1rem;
+    // @include animation(slide 30s infinite linear);
+  }
+  // }
+}

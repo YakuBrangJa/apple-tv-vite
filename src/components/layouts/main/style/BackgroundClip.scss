@@ -1,0 +1,22 @@
+.BackgroundClip {
+  height: 100vh;
+  top: 0;
+  margin-top: -5.9rem;
+  position: sticky;
+  z-index: -2;
+  width: 100%;
+  display: flex;
+  place-items: center;
+  place-content: center;
+  overflow: hidden;
+
+  video {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    display: block;
+    position: absolute;
+  }
+}
